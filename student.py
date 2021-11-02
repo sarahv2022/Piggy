@@ -57,12 +57,12 @@ class Piggy(PiggyParent):
     ****************
     '''
     def voss(self):
-      self.deg_fwd(360)
+      self.fwd()
       time.sleep(2)
       self.right(primary = 40, counter = -40)
       time.sleep(1.2)
       self.stop()
-      self.deg_fwd(360)
+      self.fwd()
       time.sleep(2)
       self.right(primary = 40, counter = -40)
       time.sleep(1.2)
