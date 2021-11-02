@@ -57,7 +57,11 @@ class Piggy(PiggyParent):
     ****************
     '''
     def voss(self):
-      deg_fwd(360)
+      for square in range 4:
+        self.fwd
+        self.sleep(1)
+        self.stop()
+        self.turn_by_deg(90)
       
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
