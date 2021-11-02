@@ -58,11 +58,11 @@ class Piggy(PiggyParent):
     '''
     def voss(self):
       for square in range (4):
-      self.fwd()
-      time.sleep(1.5)
-      self.right(primary = 40, counter = -40)
-      time.sleep(1.2)
-      self.stop()
+        self.fwd()
+        time.sleep(1.5)
+        self.right(primary = 40, counter = -40)
+        time.sleep(1.2)
+        self.stop()
       
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
