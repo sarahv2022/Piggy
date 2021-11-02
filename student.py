@@ -59,8 +59,9 @@ class Piggy(PiggyParent):
     def voss(self):
       for square in range(4):
         self.deg_fwd(360)
+        time.sleep(2)
         self.right(primary = 40, counter = -40)
-        self.sleep(1)
+        time.sleep(1.2)
         self.stop()
       
     def dance(self):
