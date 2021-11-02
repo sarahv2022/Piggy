@@ -57,7 +57,7 @@ class Piggy(PiggyParent):
     ****************
     '''
     def voss(self):
-      for square in range 4:
+      for square in range(4):
         self.fwd
         self.sleep(1)
         self.stop()
