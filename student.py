@@ -71,7 +71,7 @@ class Piggy(PiggyParent):
         # lower-ordered example...
         for dance in range(3):
           self.right(primary=50, counter=-50)
-          time.sleep(2)
+          time.sleep(1.5)
           self.stop()
           self.fwd()
           time.sleep(.2)
@@ -83,12 +83,14 @@ class Piggy(PiggyParent):
           self.left(primary=50, counter=-50)
           time.sleep(.15)
           self.stop()
-        self.right(primary=50, counter=-10)
-        time.sleep(2)
-        self.stop()
-        self.back()
-        time.sleep(1.2)
-        self.stop()
+        for conga in range(3):
+          for turn in range(8):
+            self.fwd()
+            self.right(.05)
+          self.stop()
+          self.back()
+          time.sleep(1.2)
+          self.stop()
         
 
     def safe_to_dance(self):
