@@ -90,7 +90,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.right()
             time.sleep(.05)
-            self.stop
+            self.stop()
           self.back()
           time.sleep(1)
           self.stop()
