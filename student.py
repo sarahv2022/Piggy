@@ -86,10 +86,13 @@ class Piggy(PiggyParent):
         for conga in range(3):
           for turn in range(8):
             self.fwd()
-            self.right(.05)
-          self.stop()
+            time.sleep(.3)
+            self.stop()
+            self.right()
+            time.sleep(.05)
+            self.stop
           self.back()
-          time.sleep(1.2)
+          time.sleep(1)
           self.stop()
         
 
