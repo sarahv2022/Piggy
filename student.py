@@ -91,7 +91,7 @@ class Piggy(PiggyParent):
         self.shimmy()
         self.right()
         time.sleep(60)
-        self.stop
+        self.stop()
 
     def shimmy(self):
       for shimmy in range(5):
