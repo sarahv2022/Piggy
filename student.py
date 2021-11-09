@@ -76,13 +76,19 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(.2)
           self.stop()
-        for shimmy in range(3):
+        for shimmy in range(5):
           self.right(primary=50, counter=-50)
-          time.sleep(.1)
+          time.sleep(.15)
           self.stop()
           self.left(primary=50, counter=-50)
-          time.sleep(.1)
+          time.sleep(.15)
           self.stop()
+        self.right(primary=50, counter=-10)
+        time.sleep(2)
+        self.stop()
+        self.back()
+        time.sleep(1.2)
+        self.stop()
         
 
     def safe_to_dance(self):
