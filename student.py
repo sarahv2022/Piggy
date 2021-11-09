@@ -77,8 +77,8 @@ class Piggy(PiggyParent):
           time.sleep(.2)
           self.stop()
         self.shimmy()
-        for conga in range(3):
-          for turn in range(8):
+        for conga in range(4):
+          for turn in range(7):
             self.fwd()
             time.sleep(.17)
             self.stop()
@@ -86,7 +86,7 @@ class Piggy(PiggyParent):
             time.sleep(.07)
             self.stop()
           self.back()
-          time.sleep(.7)
+          time.sleep(.8)
           self.stop()
         self.shimmy()
         self.right()
