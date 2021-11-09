@@ -76,13 +76,7 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(.2)
           self.stop()
-        for shimmy in range(5):
-          self.right(primary=50, counter=-50)
-          time.sleep(.15)
-          self.stop()
-          self.left(primary=50, counter=-50)
-          time.sleep(.15)
-          self.stop()
+        self.shimmy()
         for conga in range(3):
           for turn in range(8):
             self.fwd()
@@ -94,7 +88,15 @@ class Piggy(PiggyParent):
           self.back()
           time.sleep(.7)
           self.stop()
+        self.shimmy()
         
+    def shimmy(self):
+      for shimmy in range(5):
+          self.right(primary=50, counter=-50)
+          time.sleep(.15)
+          self.stop()
+          self.left(primary=50, counter=-50)
+          time.sleep(.15)
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
