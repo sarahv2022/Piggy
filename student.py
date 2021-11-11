@@ -38,6 +38,7 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "s": ("Shy", self.shy),
+                "sq": ("Square", self.square),
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
@@ -61,9 +62,6 @@ class Piggy(PiggyParent):
         self.read_distance()
       pass
 
-    def safe_to_dance(self):
-      return True
-
     def square(self): #square
       for square in range (4):
         self.fwd()
@@ -71,7 +69,7 @@ class Piggy(PiggyParent):
         self.right(primary = 40, counter = -40)
         time.sleep(1.2)
         self.stop()
-      
+
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
@@ -104,6 +102,10 @@ class Piggy(PiggyParent):
         time.sleep(60)
         self.stop()
 
+    def safe_to_dance(self):
+        """ Does a 360 distance check and returns true if safe """
+        return True
+
     def shimmy(self):
       for shimmy in range(5):
           self.right(primary=50, counter=-50)
@@ -112,10 +114,6 @@ class Piggy(PiggyParent):
           self.left(primary=50, counter=-50)
           time.sleep(.15)
       self.stop()
-
-    def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
-        pass
 
     def shake(self):
         """ Another example move """
