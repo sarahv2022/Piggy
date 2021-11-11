@@ -56,7 +56,15 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def voss(self): #square
+    def voss(self):
+      while True:
+        self.read_distance()
+      pass
+
+    def safe_to_dance(self):
+      return True
+
+    def square(self): #square
       for square in range (4):
         self.fwd()
         time.sleep(1.5)
@@ -68,6 +76,9 @@ class Piggy(PiggyParent):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
         
+        if safe_to_dance():
+          pass
+
         # lower-ordered example...
         for dance in range(3):
           self.right(primary=50, counter=-50)
