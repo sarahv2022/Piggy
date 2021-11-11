@@ -38,7 +38,7 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "s": ("Shy", self.shy),
-                "sq": ("Square", self.square),
+                "sq":("Square", self.square),
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
@@ -58,8 +58,13 @@ class Piggy(PiggyParent):
     ****************
     '''
     def voss(self):
-      while True:
-        self.read_distance()
+      self.read_distance()
+      if self.read_distance() < 100:
+        self.stop()
+      else:
+        self.fwd()
+        time.sleep(1.2)
+        self.stop()
       pass
 
     def square(self): #square
