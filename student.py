@@ -69,8 +69,6 @@ class Piggy(PiggyParent):
         self.stop()
       else:
         self.fwd()
-        time.sleep(1.2)
-        self.stop()
 
     def square(self): #square
       for square in range (4):
