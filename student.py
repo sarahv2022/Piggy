@@ -65,6 +65,7 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(1)
           self.turn_by_deg(-90)
+          break
         else:
           self.fwd()
 
