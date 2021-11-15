@@ -58,8 +58,8 @@ class Piggy(PiggyParent):
     ****************
     '''
     def voss(self):
-      self.read_distance()
       while True:
+        self.read_distance()
         if self.read_distance() < 150:
           self.stop()
           self.turn_by_deg(90)
