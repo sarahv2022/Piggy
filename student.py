@@ -59,19 +59,16 @@ class Piggy(PiggyParent):
     '''
     def voss(self):
       self.read_distance()
-      '''
-      if self.read_distance() < 100: 
-        print("I see a thing")
-        self.fwd()
-        time.sleep(.1)
-        self.right()
-        time.sleep(1.2)
-        self.fwd()
-        time.sleep(1)
-        self.stop()
-      else:
-        self.fwd()
-      '''
+      while True:
+        if self.read_distance() < 100: 
+          self.right()
+          time.sleep(1.2)
+          break
+        else:
+          self.fwd()
+          time.sleep(1.2)
+          self.stop()
+
     def square(self): #square
       for square in range (4):
         self.fwd()
