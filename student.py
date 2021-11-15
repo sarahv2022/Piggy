@@ -60,6 +60,7 @@ class Piggy(PiggyParent):
     def voss(self):
       self.read_distance()
       if self.read_distance() < 100: 
+        print("I see a thing")
         self.fwd()
         time.sleep(.1)
         self.right()
