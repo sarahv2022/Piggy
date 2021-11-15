@@ -61,7 +61,8 @@ class Piggy(PiggyParent):
       self.read_distance()
       if self.read_distance() < 100: 
         self.stop()
-        self.deg_fwd(90)
+        self.right()
+        time.sleep(1.2)
         self.fwd(1)
       else:
         self.fwd()
