@@ -66,7 +66,9 @@ class Piggy(PiggyParent):
             self.servo(ang)
             time.sleep(.1)
             if self.read_distance() >= 200 and ang > self.MIDPOINT:
-              self.turn_by_deg(90)
+              self.right()
+              time.sleep(1.4)
+              self.stop()
               self.fwd()
               time.sleep(1)
               self.stop()
