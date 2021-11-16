@@ -57,7 +57,8 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def voss(self):
+````def voss(self):
+
       while True:
         self.read_distance()
         if self.read_distance() < 250:
@@ -71,6 +72,18 @@ class Piggy(PiggyParent):
               print ("left")
             else:
               print ("else")
+            break
+
+          if voss() print("left"):
+            left += 1
+          elif voss() print("right"):
+            right += 1
+
+          if left > right:
+            print "i turn left"
+          elif right > left:
+            print "i turn right"
+            
           """
           self.stop()
           self.turn_by_deg(90)
