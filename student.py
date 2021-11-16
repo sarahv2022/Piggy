@@ -61,6 +61,7 @@ class Piggy(PiggyParent):
       while True:
         self.read_distance()
         if self.read_distance() < 150:
+          self.stop()
           self.servo(1000-2000)
           """
           self.stop()
