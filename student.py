@@ -65,7 +65,7 @@ class Piggy(PiggyParent):
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
             self.servo(ang)
             time.sleep(.1)
-            if self.read_distance() < 250 and self.servo() <= 1600 and self.servo() >= 1200:
+            if self.read_distance() < 250 and self.servo(ang) <= 1600 and self.servo(ang) >= 1200:
               quit
           """
           self.stop()
