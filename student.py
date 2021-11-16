@@ -69,9 +69,12 @@ class Piggy(PiggyParent):
               self.right()
               time.sleep(1.4)
               self.stop()
+              self.servo(1600)
+              self.stop()
               self.fwd()
               time.sleep(1)
               self.stop()
+              break
             elif self.read_distance() >= 200 and ang > self.MIDPOINT:
               quit()
             else:
