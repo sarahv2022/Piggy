@@ -66,11 +66,11 @@ class Piggy(PiggyParent):
             self.servo(ang)
             time.sleep(.1)
             if (self.read_distance() >= 400) and (ang < self.MIDPOINT):
-              print "right"
+              print ("right")
             elif (self.read_distance() >= 400) and (ang > self.MIDPOINT):
-              print "left"
+              print ("left")
             else:
-              print "else"
+              print ("else")
           """
           self.stop()
           self.turn_by_deg(90)
