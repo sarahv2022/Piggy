@@ -78,7 +78,7 @@ class Piggy(PiggyParent):
         else:
           self.fwd()
 
-"""
+          """ 
 
           if voss() print("left"):
             left += 1
@@ -90,9 +90,7 @@ class Piggy(PiggyParent):
           elif right > left:
             print "i turn right"
 
-            """
-            
-        
+            """   
 
     def square(self): #square
       for square in range (4):
