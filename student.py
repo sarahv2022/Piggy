@@ -78,11 +78,8 @@ class Piggy(PiggyParent):
             else:
               print ("else")
 
-          print (right)
-          print (left)
-
           if right > left:
-            self.right()
+            self.turn_by_deg(90)
             time.sleep(1)
             self.stop()
             self.fwd()
@@ -90,7 +87,7 @@ class Piggy(PiggyParent):
             self.stop()
             break
           elif left > right:
-            self.left()
+            self.turn_by_deg(-90)
             time.sleep(1)
             self.stop()
             self.fwd()
@@ -98,18 +95,7 @@ class Piggy(PiggyParent):
             self.stop()
             break
 
-          """
-          if voss() print("left"):
-            left += 1
-          elif voss() print("right"):
-            right += 1
-
-          if left > right:
-            print "i turn left"
-          elif right > left:
-            print "i turn right"
-            
-          """
+          
           """
           self.stop()
           self.turn_by_deg(90)
