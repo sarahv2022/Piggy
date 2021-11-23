@@ -100,7 +100,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.right()
             time.sleep(.8)
-            self.stop()-
+            self.stop()
 
           else:
             break
