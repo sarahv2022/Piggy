@@ -78,8 +78,8 @@ class Piggy(PiggyParent):
             else:
               print ("else")
             break
-          print right
-          print left
+          print (right)
+          print (left)
 
           """
 
