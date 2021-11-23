@@ -80,7 +80,6 @@ class Piggy(PiggyParent):
 
           if right > left:
             self.deg_fwd(90)
-            time.sleep(1)
             self.stop()
             self.fwd()
             time.sleep(1)
@@ -88,7 +87,6 @@ class Piggy(PiggyParent):
             break
           elif left > right:
             self.deg_fwd(-90)
-            time.sleep(1)
             self.stop()
             self.fwd()
             time.sleep(1)
