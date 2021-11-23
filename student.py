@@ -89,7 +89,6 @@ class Piggy(PiggyParent):
             self.left()
             time.sleep(.8)
             self.stop()
-            break
             
           elif left > right:
             self.left()
@@ -101,8 +100,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.right()
             time.sleep(.8)
-            self.stop()
-            break
+            self.stop()-
 
           else:
             break
