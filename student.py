@@ -57,12 +57,11 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    
-    def voss(self):
+````def voss(self):
 
       while True:
         self.read_distance()
-        if self.read_distance() < 300:
+        if self.read_distance() < 250:
           self.stop()
           for ang in range(self.MIDPOINT-600, self.MIDPOINT+601, 100):
             self.servo(ang)
@@ -75,11 +74,8 @@ class Piggy(PiggyParent):
               print ("else")
             break
 
-        else:
-          self.fwd()
 
-          """ 
-
+          """
           if voss() print("left"):
             left += 1
           elif voss() print("right"):
@@ -89,8 +85,19 @@ class Piggy(PiggyParent):
             print "i turn left"
           elif right > left:
             print "i turn right"
-
-            """   
+            
+          """
+          """
+          self.stop()
+          self.turn_by_deg(90)
+          self.fwd()
+          time.sleep(1)
+          self.stop()
+          self.turn_by_deg(-90)
+          self.read_distance()
+          """
+        else:
+          self.fwd()
 
     def square(self): #square
       for square in range (4):
