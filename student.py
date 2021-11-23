@@ -78,6 +78,10 @@ class Piggy(PiggyParent):
             else:
               print ("else")
             break
+          print right
+          print left
+
+          """
 
           if right > left:
             self.right()
@@ -95,7 +99,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.stop()
             break
-
+          """
           """
           if voss() print("left"):
             left += 1
