@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
       right = 0
 
       while True:
-        self.read_distance()
+        
         if self.read_distance() < 250:
           self.stop()
           for ang in range(self.MIDPOINT-600, self.MIDPOINT+601, 100):
@@ -77,7 +77,7 @@ class Piggy(PiggyParent):
               left += 1
             else:
               print ("else")
-            break
+
           print (right)
           print (left)
 
