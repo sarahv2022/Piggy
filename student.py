@@ -79,14 +79,16 @@ class Piggy(PiggyParent):
               print ("else")
 
           if right > left:
-            self.deg_fwd(90)
+            self.right()
+            time.sleep(1)
             self.stop()
             self.fwd()
             time.sleep(1)
             self.stop()
             break
           elif left > right:
-            self.deg_fwd(-90)
+            self.left()
+            time.sleep(1)
             self.stop()
             self.fwd()
             time.sleep(1)
