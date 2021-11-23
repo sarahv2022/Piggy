@@ -80,22 +80,21 @@ class Piggy(PiggyParent):
 
           if right > left:
             self.right()
-            time.sleep(1)
+            time.sleep(.8)
             self.stop()
             self.servo(1600)
             self.fwd()
             time.sleep(1)
             self.stop()
-            break
+            
           elif left > right:
             self.left()
-            time.sleep(1)
+            time.sleep(.8)
             self.stop()
             self.servo(1600)
             self.fwd()
             time.sleep(1)
             self.stop()
-            break
 
           
           """
