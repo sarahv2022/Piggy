@@ -59,6 +59,9 @@ class Piggy(PiggyParent):
     '''
     def voss(self):
 
+      left = 0
+      right = 0
+
       while True:
         self.read_distance()
         if self.read_distance() < 250:
@@ -68,12 +71,28 @@ class Piggy(PiggyParent):
             time.sleep(.1)
             if (self.read_distance() >= 400) and (ang < self.MIDPOINT):
               print ("right")
+              right += 1
             elif (self.read_distance() >= 400) and (ang > self.MIDPOINT):
               print ("left")
+              left += 1
             else:
               print ("else")
             break
 
+        if right > left:
+          self.right()
+          time.sleep(1)
+          self.stop()
+          self.fwd()
+          time.sleep(1)
+          self.stop()
+        elif right > left:
+          self.left()
+          time.sleep(1)
+          self.stop()
+          self.fwd()
+          time.sleep(1)
+          self.stop()
 
           """
           if voss() print("left"):
