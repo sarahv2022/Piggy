@@ -79,20 +79,20 @@ class Piggy(PiggyParent):
               print ("else")
             break
 
-        if right > left:
-          self.right()
-          time.sleep(1)
-          self.stop()
-          self.fwd()
-          time.sleep(1)
-          self.stop()
-        elif right > left:
-          self.left()
-          time.sleep(1)
-          self.stop()
-          self.fwd()
-          time.sleep(1)
-          self.stop()
+          if right > left:
+            self.right()
+            time.sleep(1)
+            self.stop()
+            self.fwd()
+            time.sleep(1)
+            self.stop()
+          elif left > right:
+            self.left()
+            time.sleep(1)
+            self.stop()
+            self.fwd()
+            time.sleep(1)
+            self.stop()
 
           """
           if voss() print("left"):
