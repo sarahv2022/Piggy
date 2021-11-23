@@ -86,6 +86,10 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1)
             self.stop()
+            self.left()
+            time.sleep(.8)
+            self.stop()
+            break
             
           elif left > right:
             self.left()
@@ -95,6 +99,13 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1)
             self.stop()
+            self.right()
+            time.sleep(.8)
+            self.stop()
+            break
+
+          else:
+            break
 
           
           """
