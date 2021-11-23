@@ -75,15 +75,19 @@ class Piggy(PiggyParent):
               print ("else")
             break
 
-          #if voss() print("left"):
+"""
+
+          if voss() print("left"):
             left += 1
-          #elif voss() print("right"):
+          elif voss() print("right"):
             right += 1
 
-          #if left > right:
+          if left > right:
             print "i turn left"
-          #elif right > left:
+          elif right > left:
             print "i turn right"
+
+            """
             
         else:
           self.fwd()
