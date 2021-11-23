@@ -68,7 +68,7 @@ class Piggy(PiggyParent):
           self.stop()
           for ang in range(self.MIDPOINT-600, self.MIDPOINT+601, 100):
             self.servo(ang)
-            time.sleep(.1)
+            time.sleep(1)
             if (self.read_distance() >= 400) and (ang < self.MIDPOINT):
               print ("right")
               right += 1
@@ -86,6 +86,7 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1)
             self.stop()
+            break
           elif left > right:
             self.left()
             time.sleep(1)
@@ -93,6 +94,7 @@ class Piggy(PiggyParent):
             self.fwd()
             time.sleep(1)
             self.stop()
+            break
 
           """
           if voss() print("left"):
