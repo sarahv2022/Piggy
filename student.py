@@ -72,8 +72,13 @@ class Piggy(PiggyParent):
               print ("right")
               self.swerve_right()
               break
+            elif (self.read_distance() < 350) and (ang == self.MIDPOINT):
+              print "center"
+              self.voss()
+              break
             else:
               print ("else")
+              
 
     def swerve_left(self):
       print ("left 2")
