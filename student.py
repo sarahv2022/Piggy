@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
           self.fwd()
           for ang in range(self.MIDPOINT-300, self.MIDPOINT+301, 300):
               self.servo(ang)
-              time.sleep(.2)
+              time.sleep(.5)
 
 
     def voss(self):
