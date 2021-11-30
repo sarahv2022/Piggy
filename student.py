@@ -57,6 +57,13 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def fwd_scan(self):
+      self.fwd()
+      for ang in range(self.MIDPOINT-300, self.MIDPOINT+301, 300):
+            self.servo(ang)
+            time.sleep(.2)
+
+
     def voss(self):
 
       left = 0
