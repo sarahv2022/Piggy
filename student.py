@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
           self.fwd()
           for ang in range(self.MIDPOINT-300, self.MIDPOINT+301, 300):
             self.servo(ang)
-            time.sleep(.2)
+            time.sleep(.4)
             if (self.read_distance() < 350) and (ang < self.MIDPOINT):
               print ("left")
               self.turn_left()
@@ -75,28 +75,28 @@ class Piggy(PiggyParent):
             else:
               print ("else")
 
-    def turn_left(self):
+    def swerve_left(self):
       print ("left 2")
-      self.left()
+      self.left(primary = 80, counter = 20)
       time.sleep(.3)
       self.stop()
       self.fwd()
       time.sleep(1)
       self.stop()
-      self.right()
+      self.right(primary = 80, counter = 20)
       time.sleep(.3)
       self.stop()
       self.servo(1600)
 
-    def turn_right(self):
+    def swerve_right(self):
       print ("right 2")
-      self.right()
+      self.right(primary = 80, counter = 20)
       time.sleep(.3)
       self.stop()
       self.fwd()
       time.sleep(1)
       self.stop()
-      self.left()
+      self.left(primary = 80, counter = 20)
       time.sleep(.3)
       self.stop()
       self.servo(1600)
