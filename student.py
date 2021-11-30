@@ -66,11 +66,11 @@ class Piggy(PiggyParent):
             time.sleep(.4)
             if (self.read_distance() < 350) and (ang < self.MIDPOINT):
               print ("left")
-              self.turn_left()
+              self.swerve_left()
               break
             elif (self.read_distance() < 350) and (ang > self.MIDPOINT):
               print ("right")
-              self.turn_right()
+              self.swerve_right()
               break
             else:
               print ("else")
