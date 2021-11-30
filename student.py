@@ -76,14 +76,16 @@ class Piggy(PiggyParent):
               print ("else")
 
     def turn_left(self):
+      print "left 2"
       self.left()
-      time.sleep(.1)
+      time.sleep(1)
       self.stop()
       #self.servo(1600)
 
     def turn_right(self):
+      print "right 2"
       self.right()
-      time.sleep(.1)
+      time.sleep(1)
       self.stop()
       #self.servo(1600)
 
