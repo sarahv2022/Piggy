@@ -67,9 +67,11 @@ class Piggy(PiggyParent):
             if (self.read_distance() < 300) and (ang < self.MIDPOINT):
               print ("left")
               turn_right()
+              break
             elif (self.read_distance() < 300) and (ang > self.MIDPOINT):
               print ("right")
               turn_left()
+              break
             else:
               print ("else")
 
@@ -79,7 +81,6 @@ class Piggy(PiggyParent):
       time.sleep(.1)
       self.stop()
       #self.servo(1600)
-      break
 
     def turn_right(self):
       self.stop()
@@ -87,7 +88,6 @@ class Piggy(PiggyParent):
       time.sleep(.1)
       self.stop()
       #self.servo(1600)
-      break
 
     def voss(self):
 
