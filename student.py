@@ -60,10 +60,10 @@ class Piggy(PiggyParent):
     '''
     def fwd_scan(self):
         while True:
-          self.fwd()
+          self.fwd(left=30, right=30)
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
             self.servo(ang)
-            time.sleep(.2)
+            time.sleep(.09)
             if (self.read_distance() < 320) and (ang < self.MIDPOINT):
               print ("left")
               self.swerve_left()
