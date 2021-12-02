@@ -125,7 +125,8 @@ class Piggy(PiggyParent):
               print ("left")
               left += 1
             else:
-              print ("else")
+              print ("else")\
+              break
 
           if right > left:
             self.right()
