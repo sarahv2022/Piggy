@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
     def fwd_scan(self):
         while True:
           self.fwd()
-          for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 300):
+          for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
             self.servo(ang)
             time.sleep(.15)
             if (self.read_distance() < 300) and (ang < self.MIDPOINT):
