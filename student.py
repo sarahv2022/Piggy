@@ -63,7 +63,7 @@ class Piggy(PiggyParent):
           self.fwd()
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
             self.servo(ang)
-            time.sleep(.05)
+            time.sleep(.2)
             if (self.read_distance() < 350) and (ang < self.MIDPOINT):
               print ("left")
               self.swerve_left()
