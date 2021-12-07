@@ -137,7 +137,7 @@ class Piggy(PiggyParent):
             if (self.read_distance() < 320):
               self.stop()
               break
-            elif:
+            else:
               break
             
           elif left > right:
@@ -149,7 +149,7 @@ class Piggy(PiggyParent):
             if (self.read_distance() < 320):
               self.stop()
               break
-            elif:
+            else:
               break
 
           else:
