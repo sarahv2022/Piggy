@@ -157,7 +157,8 @@ class Piggy(PiggyParent):
           else:
             print ("else 2")
             turn = randint(1,2)
-            
+            print (turn)
+
             if turn == 1:
               self.left()
               time.sleep(.8)
