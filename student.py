@@ -134,12 +134,11 @@ class Piggy(PiggyParent):
             self.stop()
             self.servo(1600)
             self.fwd()
-            time.sleep(1)
-            self.stop()
-            self.left()
-            time.sleep(.8)
-            self.stop()
-            break
+            if (self.read_distance() < 320):
+              self.stop()
+              break
+            elif:
+              break
             
           elif left > right:
             self.left()
@@ -147,12 +146,11 @@ class Piggy(PiggyParent):
             self.stop()
             self.servo(1600)
             self.fwd()
-            time.sleep(1)
-            self.stop()
-            self.right()
-            time.sleep(.8)
-            self.stop()
-            break
+            if (self.read_distance() < 320):
+              self.stop()
+              break
+            elif:
+              break
 
           else:
             print ("else 2")
