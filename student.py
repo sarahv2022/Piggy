@@ -135,6 +135,7 @@ class Piggy(PiggyParent):
             self.servo(1600)
             self.fwd()
             if (self.read_distance() < 320):
+              print ("continue right")
               self.stop()
               break
             else:
@@ -147,6 +148,7 @@ class Piggy(PiggyParent):
             self.servo(1600)
             self.fwd()
             if (self.read_distance() < 320):
+              print ("continue left")
               self.stop()
               break
             else:
