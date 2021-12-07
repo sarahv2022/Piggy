@@ -2,6 +2,7 @@
 from teacher import PiggyParent
 import sys
 import time
+from random import randint 
 
 class Piggy(PiggyParent):
 
@@ -154,6 +155,34 @@ class Piggy(PiggyParent):
             break
 
           else:
+            print ("else 2")
+            turn = randint(1,2)
+            
+            if turn == 1:
+              self.left()
+              time.sleep(.8)
+              self.stop()
+              self.servo(1600)
+              self.fwd()
+              time.sleep(1)
+              self.stop()
+              self.right()
+              time.sleep(.8)
+              self.stop()
+              break
+            elif turn == 2:
+              self.right()
+              time.sleep(.8)
+              self.stop()
+              self.servo(1600)
+              self.fwd()
+              time.sleep(1)
+              self.stop()
+              self.left()
+              time.sleep(.8)
+              self.stop()
+              break
+
             break
 
           
