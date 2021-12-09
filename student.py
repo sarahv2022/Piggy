@@ -44,7 +44,8 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "v": ("Voss Test", self.voss),
-                "fs":("Fwd Scan", self.fwd_scan)
+                "fs":("Fwd Scan", self.fwd_scan),
+                "m": ("Maze", self.maze),
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -59,21 +60,34 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def maze(self):
+      while True:
+          self.fwd(left=35, right=35)
+          for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
+            self.servo(ang)
+            time.sleep(.09)
+            if (self.read_distance() < 100) and (ang == self.MIDPOINT):
+              print ("center")
+              self.voss()
+              break
+            else:
+              print ("else")
+    
     def fwd_scan(self):
         while True:
           self.fwd(left=35, right=35)
           for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
             self.servo(ang)
             time.sleep(.09)
-            #if (self.read_distance() < 100) and (ang < self.MIDPOINT):
+            if (self.read_distance() < 100) and (ang < self.MIDPOINT):
               print ("left")
               self.swerve_left()
               break
-            #elif (self.read_distance() < 100) and (ang > self.MIDPOINT):
+            elif (self.read_distance() < 100) and (ang > self.MIDPOINT):
               print ("right")
               self.swerve_right()
               break
-            if (self.read_distance() < 100) and (ang == self.MIDPOINT):
+            elif (self.read_distance() < 100) and (ang == self.MIDPOINT):
               print ("center")
               self.voss()
               break
