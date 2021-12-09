@@ -61,17 +61,83 @@ class Piggy(PiggyParent):
     ****************
     '''
     def maze(self):
+
+      left = 0
+      right = 0
+
       while True:
-          self.fwd(left=35, right=35)
-          for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 400):
+        
+        if self.read_distance() < 200:
+          self.stop()
+          for ang in range(self.MIDPOINT-700, self.MIDPOINT+701, 100):
             self.servo(ang)
-            time.sleep(.09)
-            if (self.read_distance() < 100) and (ang == self.MIDPOINT):
-              print ("center")
-              self.voss()
-              break
+            time.sleep(.2)
+            if (self.read_distance() >= 350) and (ang < self.MIDPOINT):
+              print ("right")
+              right += 1
+            elif (self.read_distance() >= 350) and (ang > self.MIDPOINT):
+              print ("left")
+              left += 1
             else:
               print ("else")
+
+          if right > left:
+            self.right()
+            time.sleep(.8)
+            self.stop()
+            self.servo(1600)
+            self.fwd()
+            if (self.read_distance() < 200):
+              print ("continue right")
+              self.stop()
+              break
+            else:
+              print ("stop")
+            
+          elif left > right:
+            self.left()
+            time.sleep(.8)
+            self.stop()
+            self.servo(1600)
+            self.fwd()
+            if (self.read_distance() < 200):
+              print ("continue left")
+              self.stop()
+              break
+            else:
+              print ("stop")
+
+          else:
+            print ("else 2")
+            turn = randint(1,2)
+            print (turn)
+
+            if turn == 1:
+              self.left()
+              time.sleep(.8)
+              self.stop()
+              self.servo(1600)
+              self.fwd()
+              if (self.read_distance() < 200):
+                print ("continue left 2")
+                self.stop()
+                break
+              else:
+                print ("stop")
+            elif turn == 2:
+              self.right()
+              time.sleep(.8)
+              self.stop()
+              self.servo(1600)
+              self.fwd()
+              if (self.read_distance() < 200):
+                print ("continue right 2")
+                self.stop()
+                break
+              else:
+                print ("stop")
+            break
+
     
     def fwd_scan(self):
         while True:
