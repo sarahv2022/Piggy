@@ -95,7 +95,7 @@ class Piggy(PiggyParent):
               break
             else:
               print ("stop")
-              break""""
+              break"""
             
           elif left > right:
             self.left()
@@ -110,7 +110,7 @@ class Piggy(PiggyParent):
               break
             else:
               print ("stop")
-              break""""
+              break"""
 
           else:
             print ("else 2")
