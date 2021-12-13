@@ -125,6 +125,8 @@ class Piggy(PiggyParent):
                 break
               else:
                 print ("stop")
+                break
+
             elif turn == 2:
               self.right()
               time.sleep(.8)
@@ -137,6 +139,7 @@ class Piggy(PiggyParent):
                 break
               else:
                 print ("stop")
+                break
             break
 
     
