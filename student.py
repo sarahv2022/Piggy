@@ -87,11 +87,13 @@ class Piggy(PiggyParent):
             time.sleep(.8)
             self.stop()
             self.servo(1600)
-            self.fwd()
             break
-            
-            """"if (self.read_distance() < 200):
-              print ("continue left")
+
+            """"
+            self.fwd()
+            if (self.read_distance() < 200):
+              print ("continue right")
+              self.stop()
               break
             else:
               print ("stop")
@@ -102,10 +104,11 @@ class Piggy(PiggyParent):
             time.sleep(.8)
             self.stop()
             self.servo(1600)
-            self.fwd()
             break
-            
-            """"if (self.read_distance() < 200):
+
+            """"
+            self.fwd()
+            if (self.read_distance() < 200):
               print ("continue left")
               break
             else:
@@ -122,19 +125,25 @@ class Piggy(PiggyParent):
               time.sleep(.8)
               self.stop()
               self.servo(1600)
+              break
+
+              """"
               self.fwd()
               if (self.read_distance() < 200):
                 print ("continue left 2")
                 break
               else:
                 print ("stop")
-                break
+                break"""
 
             elif turn == 2:
               self.right()
               time.sleep(.8)
               self.stop()
               self.servo(1600)
+              break
+
+              """"
               self.fwd()
               if (self.read_distance() < 200):
                 print ("continue right 2")
@@ -142,7 +151,7 @@ class Piggy(PiggyParent):
                 break
               else:
                 print ("stop")
-                break
+                break"""
             break
 
     
