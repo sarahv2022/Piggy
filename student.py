@@ -87,7 +87,6 @@ class Piggy(PiggyParent):
             time.sleep(.8)
             self.stop()
             self.servo(1600)
-            break
 
             """"
             self.fwd()
@@ -104,7 +103,6 @@ class Piggy(PiggyParent):
             time.sleep(.8)
             self.stop()
             self.servo(1600)
-            break
 
             """"
             self.fwd()
