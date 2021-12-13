@@ -37,7 +37,6 @@ class Piggy(PiggyParent):
         print("\n *** MENU ***") 
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
-                "o": ("Obstacle count", self.obstacle_count),
                 "s": ("Shy", self.shy),
                 "sq":("Square", self.square),
                 "f": ("Follow", self.follow),
@@ -369,10 +368,6 @@ class Piggy(PiggyParent):
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
-
-    def obstacle_count(self):
-        """Does a 360 scan and returns the number of obstacles it sees"""
-        pass
 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
