@@ -339,7 +339,6 @@ class Piggy(PiggyParent):
         while self.read_distance() > 150:  # TODO: fix this magic number
             self.fwd()
             time.sleep(.01)
-        self.stop()
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
         # TODO: average the left side of the scan dict
