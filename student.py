@@ -68,21 +68,22 @@ class Piggy(PiggyParent):
       while True:
         
         self.fwd()
-        if self.read_distance() < 200:
+        if self.read_distance() < 180:
           self.stop()
           for ang in range(self.MIDPOINT-700, self.MIDPOINT+701, 100):
             self.servo(ang)
             time.sleep(.2)
-            if (self.read_distance() >= 350) and (ang < self.MIDPOINT):
+            if (self.read_distance() >= 300) and (ang < self.MIDPOINT):
               print ("right")
               right += 1
-            elif (self.read_distance() >= 350) and (ang > self.MIDPOINT):
+            elif (self.read_distance() >= 300) and (ang > self.MIDPOINT):
               print ("left")
               left += 1
             else:
               print ("else")
 
           if right > left:
+            print("turn right")
             self.right()
             time.sleep(.8)
             self.stop()
@@ -99,6 +100,7 @@ class Piggy(PiggyParent):
               break"""
             
           elif left > right:
+            print ("turn left")
             self.left()
             time.sleep(.8)
             self.stop()
@@ -119,6 +121,7 @@ class Piggy(PiggyParent):
             print (turn)
 
             if turn == 1:
+              print("random 1")
               self.left()
               time.sleep(.8)
               self.stop()
@@ -135,6 +138,7 @@ class Piggy(PiggyParent):
                 break"""
 
             elif turn == 2:
+              print ("random 2")
               self.right()
               time.sleep(.8)
               self.stop()
