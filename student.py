@@ -88,7 +88,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.servo(1600)
             
-          else left > right:
+          else:
             print ("turn left")
             self.left()
             time.sleep(.7)
