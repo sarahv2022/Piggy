@@ -84,14 +84,14 @@ class Piggy(PiggyParent):
           if right > left:
             print("turn right")
             self.right()
-            time.sleep(.8)
+            time.sleep(.9)
             self.stop()
             self.servo(1600)
             
           else:
             print ("turn left")
             self.left()
-            time.sleep(.8)
+            time.sleep(.9)
             self.stop()
             self.servo(1600)
 
