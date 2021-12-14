@@ -115,8 +115,7 @@ class Piggy(PiggyParent):
               self.stop()
               self.servo(1600)
               """
-
-            break
+          break
 
     
     def fwd_scan(self):
