@@ -67,7 +67,7 @@ class Piggy(PiggyParent):
       while True:
         
         self.fwd()
-        if self.read_distance() < 180:
+        if self.read_distance() < 100:
           self.stop()
           for ang in range(self.MIDPOINT-700, self.MIDPOINT+701, 100):
             self.servo(ang)
@@ -342,8 +342,6 @@ class Piggy(PiggyParent):
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
         # TODO: average the left side of the scan dict
-        
-
 
 ###########
 ## MAIN APP
