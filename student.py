@@ -88,13 +88,14 @@ class Piggy(PiggyParent):
             self.stop()
             self.servo(1600)
             
-          elif left > right:
+          else left > right:
             print ("turn left")
             self.left()
             time.sleep(.7)
             self.stop()
             self.servo(1600)
 
+          """"
           else:
             print ("else 2")
             turn = randint(1,2)
@@ -113,6 +114,7 @@ class Piggy(PiggyParent):
               time.sleep(.7)
               self.stop()
               self.servo(1600)
+              """
 
             break
 
